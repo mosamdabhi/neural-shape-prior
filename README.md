@@ -1,2 +1,2 @@
 # two-views-enough
-Official PyTorch Implementation for the paper "Two views are enough", In Submission, CVPR 2021
+Official PyTorch Implementation for the paper "Two views are enough", In Submission
