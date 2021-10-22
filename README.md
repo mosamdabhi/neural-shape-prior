@@ -1,2 +1,2 @@
-# two-views-enough
-Official PyTorch Implementation for the paper "Two views are enough", In Submission
+# High Fidelity 3D Reconstructions with Limited Physical Views
+
