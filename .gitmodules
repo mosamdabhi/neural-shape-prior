@@ -1,0 +1,3 @@
+[submodule "mvnrsfm/helpers/torch-batch-svd"]
+	path = mvnrsfm/helpers/torch-batch-svd
+	url = https://github.com/KinglittleQ/torch-batch-svd
