@@ -4,7 +4,7 @@ MV-NRSfM: High Fidelity 3D Reconstructions with Limited Physical Views (3DV 2021
 
 <img src="graphics/3dv2021_banner.jpg" width=300>
 
-### [Paper](https://arxiv.org/abs/2110.11599) | [Project page](https://mv-nrsfm.github.io) | [Pretrained models](https://doi.org/10.5281/zenodo.7054596) | [Featured Post](https://www.adelaide.edu.au/aiml/news/list/2022/08/01/new-ai-tech-to-bring-human-like-understanding-of-our-3d-world)
+### [Paper](https://arxiv.org/abs/2110.11599) | [Project page](https://mv-nrsfm.github.io) | [Pretrained models](https://doi.org/10.5281/zenodo.7346689) | [Featured Post](https://www.adelaide.edu.au/aiml/news/list/2022/08/01/new-ai-tech-to-bring-human-like-understanding-of-our-3d-world)
 
 
 ## TL;DR Summary
