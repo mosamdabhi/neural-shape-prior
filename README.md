@@ -61,7 +61,7 @@ We have provided the pretrained models for [Human36M](http://vision.imar.ro/huma
 Please run `demo.ipynb` to play around the validation part of Neural Shape Prior based MV-NRSfM. You can either use pretrained models and data given in this repository or plug your own trained models in this demo script. You can visualize the 3D structure as well as 2D predictions (w/ and w/o overlaying on original RGB image). The reconstructed 3D could be visualized via plotly:
 
 <p align="center">
-  <img width="800" src=graphics/demo_animation.gif>
+  <img width="800" src=graphics/demo_animation_cropped.gif>
 </p>
 
 
