@@ -95,7 +95,7 @@ Please run `demo.ipynb` to play around the validation part of Neural Shape Prior
 
 
 ### Citation
-If you use our code, dataset, or models in your research, please cite with:
+If you use our code or models in your research, please cite with:
 ```
 
 @inproceedings{dabhi2021mvnrsfm,
