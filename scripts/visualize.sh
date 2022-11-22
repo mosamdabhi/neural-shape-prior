@@ -1,11 +1,11 @@
 #!/bin/bash 
 
-dataset='Human36M'
+dataset='Cheetah'
 GPU_ID=0
 field_of_validation='MV_Train'
 mode_of_validation='2D'
 plot_separate='False'
-plot_improvement_over_iterations='True'
+plot_improvement_over_iterations='False'
 validate_manual_labels='False'
 img_type=.jpg
 

@@ -402,13 +402,13 @@ def main(args):
             else:
                 logs_path_dir_cam = logs_path_dir + "/Combined"
                 make_dir(logs_path_dir_cam)
-                # for frame_idx in tqdm(non_nan_indices):
-                for frame_idx in tqdm(range(W_Pred_Full.shape[0])):
+                for frame_idx in tqdm(non_nan_indices):
+                # for frame_idx in tqdm(range(W_Pred_Full.shape[0])):
                     im = []
-                    # for cam_idx in range(total_views):
-                    #     im.append(img.imread(image_paths_cam[cam_idx][frame_idx]))
                     for cam_idx in range(total_views):
-                        im.append(img.imread(image_paths_cam[cam_idx][0]))
+                        im.append(img.imread(image_paths_cam[cam_idx][frame_idx]))
+                    # for cam_idx in range(total_views):
+                    #     im.append(img.imread(image_paths_cam[cam_idx][785]))
 
                     img_store_location = (
                         logs_path_dir_cam + "/" + str(frame_idx) + str(args.img_type)
@@ -424,16 +424,16 @@ def main(args):
                             joint_connections,
                         )
                     else:
-                        # gen_image(
-                        #     im, W_Pred[:, frame_idx, :, :], img_store_location, joint_connections
-                        # )
-                        # pdb.set_trace()
                         gen_image(
-                            im,
-                            W_Pred_Full[frame_idx, 0:2, 0, :, :],
-                            img_store_location,
-                            joint_connections,
+                            im, W_Pred[:, frame_idx, :, :], img_store_location, joint_connections
                         )
+                        # pdb.set_trace()
+                        # gen_image(
+                        #     im,
+                        #     W_Pred_Full[frame_idx, 0:2, 785, :, :],
+                        #     img_store_location,
+                        #     joint_connections,
+                        # )
 
     elif args.mode_of_validation == "3D":
         R = rigid_rotation
@@ -447,10 +447,10 @@ def main(args):
         non_nan_indices = np.any(np.any(~np.isnan(S_Pred), axis=1), axis=1)
         non_nan_indices = np.argwhere(non_nan_indices == True)[:, 0].tolist()
 
-        # for idx in tqdm(non_nan_indices):
-        for idx in tqdm(range(S_Pred_Full.shape[0])):
-            # if ~np.any(S_Pred[idx, :, :] == 0):
-            if ~np.any(S_Pred_Full[idx, :, :] == 0):
+        for idx in tqdm(non_nan_indices):
+        # for idx in tqdm(range(S_Pred_Full.shape[0])):
+            if ~np.any(S_Pred[idx, :, :] == 0):
+            # if ~np.any(S_Pred_Full[idx, :, :] == 0):
                 if cam_counter == len(cam_x):
                     cam_counter = 0
                 img_store_location = logs_path_dir + "/" + str(idx) + ".png"
@@ -458,10 +458,10 @@ def main(args):
                     joint_connections,
                     cam_x[cam_counter],
                     cam_y[cam_counter],
-                    # S_Pred[idx, :, :] @ R,
-                    # S_GT[idx, :, :] @ R,
-                    S_Pred_Full[idx, 785, :, :] @ R,
-                    S_GT[785, :, :] @ R,
+                    S_Pred[idx, :, :] @ R,
+                    S_GT[idx, :, :] @ R,
+                    # S_Pred_Full[idx, 785, :, :] @ R,
+                    # S_GT[785, :, :] @ R,
                     range_scale=range_scale,
                 )
                 fig.write_image(img_store_location)
