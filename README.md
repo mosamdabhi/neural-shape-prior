@@ -56,19 +56,20 @@ Fetch the pre-trained mv-nrsfm models from Zenodo using:
 
 ## Dataset format
 
-   ```
-   The final `neural-shape-prior` directory should look like this:
+- The final `neural-shape-prior` directory should look like this:
    ```
    ${neural-shape-prior}
     `-- data
-        `-- Human36M
+        `-- Cheetah
             |-- annot/
             |-- images/
+        `-- Human36M
+            |-- annot/
+            |-- images/	  
         
-    `-- models
+    `-- models      
     ```
-    This codebase expects `.pkl` files within the `annot/` directory. For exact data structure fields within the pickle files, please refer the [format similar to MBW-Data](https://github.com/mosamdabhi/MBW-Data/blob/main/README.md#annotations-format).
-  
+  This codebase expects `.pkl` files within the `annot/` directory. For exact data structure fields within the pickle files, please refer the [format similar to MBW-Data](https://github.com/mosamdabhi/MBW-Data/blob/main/README.md#annotations-format).
 
 
 ## Demo
