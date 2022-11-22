@@ -54,6 +54,22 @@ Fetch the pre-trained mv-nrsfm models from Zenodo using:
     rm -rf models.zip && rm -rf md5sums.txt
     ```
 
+## Dataset format
+
+   ```
+   The final `neural-shape-prior` directory should look like this:
+   ```
+   ${neural-shape-prior}
+    `-- data
+        `-- Human36M
+            |-- annot/
+            |-- images/
+        
+    `-- models
+    ```
+    This codebase expects `.pkl` files within the `annot/` directory. For exact data structure fields within the pickle files, please refer the [format similar to MBW-Data](https://github.com/mosamdabhi/MBW-Data/blob/main/README.md#annotations-format).
+  
+
 
 ## Demo
 We have provided the pretrained models for [Human36M](http://vision.imar.ro/human3.6m/description.php) (Subject #1, Directions 1 Sequence), [Cheetah dataset](https://github.com/African-Robotics-Unit/AcinoSet), and [Monkey dataset](https://github.com/OpenMonkeyStudio/OMS_Data) along with the annotation data in the `data` directory.
@@ -77,3 +93,17 @@ Please run `demo.ipynb` to play around the validation part of Neural Shape Prior
 
 
 
+### Citation
+If you use our code, dataset, or models in your research, please cite with:
+```
+
+@inproceedings{dabhi2021mvnrsfm,
+	title={High Fidelity 3D Reconstructions with Limited Physical Views},
+	author={Dabhi, Mosam and Wang, Chaoyang and Saluja, Kunal and Jeni, Laszlo and Fasel, Ian and Lucey, Simon},
+	booktitle={2021 International Conference on 3D Vision (3DV)},
+	year={2021},
+	ee = {https://ieeexplore.ieee.org/abstract/document/9665845},
+	organization={IEEE}
+}
+
+```
