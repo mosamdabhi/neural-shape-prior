@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-dataset='Cheetah'
+dataset='Human36M'
 GPU_ID=0
 field_of_validation='MV_Train'
 mode_of_validation='2D'
